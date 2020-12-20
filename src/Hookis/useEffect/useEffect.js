@@ -26,6 +26,34 @@ function Example() {
        // console.log(a)
        })`
 
+    const code3 = `class Example2 extends React.Component {
+        constructor(props) {
+            super(props)
+            this.state = {
+                count : 0
+            }
+        }
+    
+        // excuit first time
+        componentDidMount() {
+            document.title = \`You clicked \${this.state.count} time, (fist time)\`
+        }
+    
+        // excuit ever time
+        componentDidUpdate() {
+            document.title = \`You clicked \${this.state.count}\`
+        }
+    
+        render() {
+            return (
+                <div>
+                    <p>Click button to change html API document.title use class + componentDidMount</p>
+                    <button onClick = { () => this.setState({ count : this.state.count + 1 }) } >Click</button>
+                </div>
+            )
+        }
+    }`
+
 
 export default function useEffectExample() {
     return (
@@ -91,15 +119,23 @@ class Example2 extends React.Component {
 
     // excuit first time
     componentDidMount() {
-        document.title = `You clicked ${this.state.count} (time, fist time)`
+        document.title = `You clicked ${this.state.count} time, (fist time)`
     }
 
     // excuit ever time
+    componentDidUpdate() {
+        document.title = `You clicked ${this.state.count}`
+    }
 
     render() {
         return (
             <div>
-                
+                <p>Click button to change html API document.title use class + componentDidMount</p>
+                <button onClick = { () => this.setState({ count : this.state.count + 1 }) } >Click</button>
+                <p>code : </p>
+                <SyntaxHighlighter language="javascript" style={tomorrowNight}>
+                    {code3}
+                </SyntaxHighlighter>
             </div>
         )
     }
