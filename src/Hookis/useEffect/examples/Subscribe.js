@@ -15,6 +15,9 @@ export default function Subscribe() {
                 Subscribe : {count} 
                 <button onClick={ () => setCount(count+1) }>Follow</button>
             </p>
+            {show ? <p>true</p> : <p>false</p> }
+            <button onClick = { () => setShow(!show) }>Turn On/Off</button>
+            <button onClick = { () => setUserID(userID + 1) }>Change userID</button>
            </div>
         </>
     )
