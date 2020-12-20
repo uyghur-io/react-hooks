@@ -11,18 +11,28 @@ export default function useEffectExample() {
 
 function Example() {
    const [count, setCount] = useState(0)
+   const [dir, setDir] = useState("ltr")
+
+   // console.log(document.location.href)
 
    useEffect(() => {
-       document.title = `You Clicked ${count} times`
+    document.title = `You Clicked ${count} times`
    })
+
+   useEffect(() => {
+     document.dir = `${dir}`
+    // console.log(a)
+})
    
    return (
        <div>
            <h3>
                useEffect
            </h3>
-           <p>You clicked {count} times.</p>
+           <p>Click button to change html API document.title .</p>
            <button onClick={ () => setCount(count + 1) } >Click</button>
+           <p>Click button to change html API document.dir .</p>
+           <button onClick={ () => setDir("rtl") }>Click</button>
        </div>
    )
 }
