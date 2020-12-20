@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Example from "../useEffect/examples/Example";
 import ExampleOld from "../useEffect/examples/ExampleOld";
 import GetGithubUser from '../useEffect/examples/GetGithubUser'
+import Subscribe from '../useEffect/examples/Subscribe'
 
 export default function useEffectExample() {
     return (
@@ -13,6 +14,7 @@ export default function useEffectExample() {
                     <Route path="/useEffect/Example" component={Example}/>
                     <Route path="/useEffect/ExampleOld" component={ExampleOld}/>
                     <Route path="/useEffect/GetGithubUser" component={GetGithubUser}/>
+                    <Route path="/useEffect/Subscribe" component={Subscribe}/>
                 </Switch>
             </Router>
         </>
@@ -22,10 +24,11 @@ export default function useEffectExample() {
 const Home = () => (
     <div>
       <h3>
-        useEffect
+        useEffect 
       </h3>
       <Link to="/useEffect/Example"><li>Example</li></Link>
       <Link to="/useEffect/ExampleOld"><li>Example Old</li></Link>
       <Link to="/useEffect/GetGithubUser"><li>Get Github Users</li></Link>
+      <Link to="/useEffect/Subscribe"><li>Subscribe</li></Link>
     </div>
   )

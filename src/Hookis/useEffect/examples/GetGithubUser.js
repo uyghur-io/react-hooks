@@ -45,7 +45,7 @@ export default function GetGithubUser() {
             <SyntaxHighlighter language="javascript" style={tomorrowNight}>
                     {code}
             </SyntaxHighlighter>
-            <p> Result : </p><hr/>
+            <p> Result : <code className="customCode">useEffect()</code> is after <code className="customCode">render</code> finishing. Every time render is refreshing end of that useEffect is active</p><hr/>
             <p>
                 {users.map(user =>(
                     <div key={user.id} className="Card">
