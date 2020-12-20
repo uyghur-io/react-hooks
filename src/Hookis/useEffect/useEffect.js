@@ -130,7 +130,7 @@ class Example2 extends React.Component {
     render() {
         return (
             <div>
-                <p>Click button to change html API document.title use class + componentDidMount</p>
+                <p>Click button to change html API document.title use class + componentDidMount </p>
                 <button onClick = { () => this.setState({ count : this.state.count + 1 }) } >Click</button>
                 <p>code : </p>
                 <SyntaxHighlighter language="javascript" style={tomorrowNight}>
